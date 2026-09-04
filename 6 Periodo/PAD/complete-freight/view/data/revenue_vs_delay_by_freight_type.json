@@ -1,0 +1,22 @@
+[
+  {
+    "x": 0.43,
+    "y": 126000.0,
+    "label": "Carga Fracionada"
+  },
+  {
+    "x": 0.14,
+    "y": 179000.0,
+    "label": "Carga Completa"
+  },
+  {
+    "x": 0.62,
+    "y": 205000.0,
+    "label": "Produtos Perecíveis"
+  },
+  {
+    "x": 0.75,
+    "y": 202000.0,
+    "label": "Carga Perigosa"
+  }
+]

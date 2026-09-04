@@ -1,0 +1,16 @@
+{
+  "labels": [
+    "Sudeste",
+    "Centro-Oeste",
+    "Norte",
+    "Nordeste",
+    "Sul"
+  ],
+  "values": [
+    8,
+    6,
+    5,
+    4,
+    3
+  ]
+}
