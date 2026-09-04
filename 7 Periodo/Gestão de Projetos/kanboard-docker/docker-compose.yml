@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  # Banco de dados PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: kanboard-postgres
+    environment:
+      POSTGRES_DB: kanboard
+      POSTGRES_USER: kanboard
+      POSTGRES_PASSWORD: kanboard_senha_123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - "5432:5432"
+  # Aplicação Kanboard
+  kanboard:
+    image: kanboard/kanboard:latest
+    container_name: kanboard-app
+    ports:
+      - "8080:80"
+    volumes:
+      - kanboard_data:/var/www/html/data
+      - kanboard_plugins:/var/www/html/plugins
+    environment:
+      DATABASE_URL: "postgres://kanboard:kanboard_senha_123@postgres:5432/kanboard"
+    depends_on:
+      - postgres
+    restart: always
+volumes:
+  postgres_data:
+  kanboard_data:
+  kanboard_plugins:
